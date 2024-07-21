@@ -1,0 +1,43 @@
+:root{
+    --salmon: #EF9D71;
+    --black: black;
+    --white: white;
+    --cyan: #AEDEE0;
+    --dsalmon: #4f221c;
+    --dcyan: #133535;
+}
+
+body{
+    transition: background-color ease-out 0.5s;    /*for smooth transition of color change*/
+}
+
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%);  /*this code is used to make the vdo circle from the middle of the screen using clip-path and it use the --clip variable made in the vdodiv class */
+}
+*::selection{
+    background-color: #EF9D71;
+}
+body[theme="black"]{
+    background-color: var(--black);
+}
+body[theme="black"] .section{
+    color: var(--white);
+}
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="cyan"] .section{
+    color: var(--dcyan);
+}
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+body[theme="salmon"] .section{
+    color: var(--dsalmon);
+}
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="white"] .section{
+    color: var(--black);
+}
